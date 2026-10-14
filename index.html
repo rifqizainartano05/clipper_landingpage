@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Clipper — Video clipper profesional dengan AI. Auto-clip highlight, trim presisi, export multi-format, dan lebih banyak lagi. Mulai gratis hari ini." />
+  <meta name="keywords" content="video clipper, auto clip, AI video, trim video, export video, highlight clip" />
+  <meta property="og:title" content="Clipper — Smart Video Clipping Tool" />
+  <meta property="og:description" content="Clip smarter, not harder. Buat highlight video dalam hitungan detik." />
+  <title>Clipper — Smart Video Clipping Tool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Clipper home">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 4l12 8-12 8V4z"/>
+            <line x1="19" y1="4" x2="19" y2="20"/>
+          </svg>
+        </div>
+        <span class="logo-text">Clipper</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Fitur</a></li>
+        <li><a href="#how-it-works">Cara Kerja</a></li>
+        <li><a href="#pricing">Harga</a></li>
+        <li><a href="#testimonials">Testimoni</a></li>
+      </ul>
+      <div class="nav-divider"></div>
+      <div class="nav-actions">
+        <a href="#" class="btn-ghost" id="loginBtn">Masuk</a>
+        <a href="#pricing" class="btn-primary nav-cta">Mulai Gratis</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="flex-shrink:0"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <span>Didukung AI Terdepan</span>
+      </div>
+      <h1 class="hero-title">
+        Clip Video Lebih<br />
+        <span class="gradient-text">Cerdas &amp; Cepat</span>
+      </h1>
+      <p class="hero-subtitle">
+        Dari video panjang berjam-jam menjadi highlight sempurna dalam hitungan detik. AI Clipper mendeteksi momen terbaik secara otomatis — no drama, no sweat.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#pricing" class="btn-primary btn-lg" id="heroCtaBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5,3 19,12 5,21"/></svg>
+          Coba Gratis 14 Hari
+        </a>
+        <a href="#how-it-works" class="btn-outline btn-lg" id="watchDemoBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10,8 16,12 10,16"/></svg>
+          Lihat Demo
+        </a>
+      </div>
+      <div class="hero-social-proof">
+        <div class="avatar-stack">
+          <div class="avatar" style="background: linear-gradient(135deg,#6366f1,#8b5cf6)">M</div>
+          <div class="avatar" style="background: linear-gradient(135deg,#3b82f6,#06b6d4)">A</div>
+          <div class="avatar" style="background: linear-gradient(135deg,#f59e0b,#ef4444)">R</div>
+          <div class="avatar" style="background: linear-gradient(135deg,#10b981,#3b82f6)">D</div>
+          <div class="avatar" style="background: linear-gradient(135deg,#ec4899,#f43f5e)">S</div>
+        </div>
+        <p><strong>2,400+</strong> kreator konten sudah pakai Clipper</p>
+      </div>
+    </div>
+    <div class="hero-mockup-wrap container">
+      <div class="mockup-window">
+        <div class="mockup-bar">
+          <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+          <span class="mockup-title">Clipper — timeline.mp4</span>
+        </div>
+        <img src="C:\Users\ZAIN\.gemini\antigravity\brain\822c08ce-77d0-435a-96ee-3c5457cc0ec0\clipper_hero_ui_1791944688279.jpg" alt="Clipper video editor interface" class="mockup-img" loading="lazy" />
+        <div class="mockup-overlay-badge processing" id="aiProcessingBadge">
+          <svg class="spin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+          <span>AI sedang menganalisis...</span>
+        </div>
+        <div class="mockup-overlay-badge success hidden" id="aiSuccessBadge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>
+          <span>3 highlight ditemukan!</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ── LOGOS / TRUST STRIP ── -->
+  <section class="trust-strip">
+    <div class="container">
+      <p class="trust-label">Dipercaya oleh kreator di</p>
+      <div class="trust-logos">
+        <div class="trust-logo">YouTube</div>
+        <div class="trust-logo">Twitch</div>
+        <div class="trust-logo">TikTok</div>
+        <div class="trust-logo">Instagram</div>
+        <div class="trust-logo">Podcast Studio</div>
+        <div class="trust-logo">Vimeo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ── -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Fitur Unggulan</div>
+        <h2 class="section-title">Semua yang kamu butuhkan, <br/><span class="gradient-text">dalam satu tool</span></h2>
+        <p class="section-desc">Dari auto-clip berbasis AI hingga export multi-format — Clipper dirancang untuk mempercepat alur kerja editing video kamu.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card feature-card--large" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #6366f1">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <h3>AI Scene Detection</h3>
+          <p>AI kami menganalisis setiap frame dan secara otomatis mendeteksi momen emosional, aksi, dan highlight — tanpa kamu perlu menyentuh timeline.</p>
+          <div class="feature-demo-bar">
+            <div class="demo-bar-inner" id="aiBar" style="width:0%"></div>
+            <span class="demo-bar-label">Akurasi deteksi: <strong>97.4%</strong></span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #3b82f6">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Trim Presisi Frame</h3>
+          <p>Kontrol penuh dengan akurasi per-frame. Drag, snap, dan potong video persis di titik yang kamu inginkan.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #10b981">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </div>
+          <h3>Export Multi-Format</h3>
+          <p>Export ke MP4, GIF, WebM, MOV, dan lebih banyak lagi — dengan preset siap pakai untuk YouTube, TikTok, Reels, dan lainnya.</p>
+          <div class="format-chips">
+            <span class="chip">MP4</span>
+            <span class="chip">GIF</span>
+            <span class="chip">WebM</span>
+            <span class="chip">MOV</span>
+            <span class="chip">AVI</span>
+          </div>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #f59e0b">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Subtitle Generator</h3>
+          <p>Generate subtitle otomatis dari audio dengan akurasi tinggi. Dukung 30+ bahasa termasuk Bahasa Indonesia.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #8b5cf6">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Real-time Preview</h3>
+          <p>Lihat perubahan edit kamu secara instan tanpa render ulang. Preview berkualitas tinggi di sisi kanan layar.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #ef4444">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Batch Processing</h3>
+          <p>Upload sekaligus ratusan video dan biarkan Clipper memproses semuanya secara paralel. Hemat waktu berjam-jam.</p>
+        </div>
+
+        <div class="feature-card" data-reveal>
+          <div class="feature-icon-wrap" style="--icon-color: #06b6d4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+          </div>
+          <h3>Cloud Sync</h3>
+          <p>Project dan file-mu tersimpan aman di cloud. Akses dari mana saja, kapan saja, di perangkat apa pun.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how-it-works section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Cara Kerja</div>
+        <h2 class="section-title">Tiga langkah, <span class="gradient-text">hasil luar biasa</span></h2>
+      </div>
+      <div class="steps-wrapper">
+        <div class="step" data-step="1" data-reveal>
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Upload Video</h3>
+            <p>Drag &amp; drop video kamu — dari file lokal, URL YouTube, atau langsung dari Google Drive / Dropbox.</p>
+          </div>
+          <div class="step-visual">
+            <div class="upload-box" id="uploadDemo">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+              <p>Drop file di sini</p>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"><div class="connector-line"></div></div>
+
+        <div class="step step--reverse" data-step="2" data-reveal>
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>AI Analisis &amp; Clip</h3>
+            <p>AI kami membaca waveform audio, ekspresi wajah, dan momentum adegan — lalu memilih momen terbaik untukmu.</p>
+          </div>
+          <div class="step-visual">
+            <div class="ai-analysis-viz">
+              <div class="analysis-bar" style="height:40%"></div>
+              <div class="analysis-bar" style="height:75%"></div>
+              <div class="analysis-bar active" style="height:90%"></div>
+              <div class="analysis-bar" style="height:60%"></div>
+              <div class="analysis-bar active" style="height:85%"></div>
+              <div class="analysis-bar" style="height:50%"></div>
+              <div class="analysis-bar" style="height:70%"></div>
+              <div class="analysis-bar active" style="height:95%"></div>
+              <div class="analysis-bar" style="height:45%"></div>
+              <div class="analysis-bar" style="height:65%"></div>
+              <div class="analysis-bar" style="height:80%"></div>
+              <div class="analysis-bar active" style="height:88%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="step-connector"><div class="connector-line"></div></div>
+
+        <div class="step" data-step="3" data-reveal>
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>Edit &amp; Export</h3>
+            <p>Fine-tune clip, tambah subtitle, pilih format output, dan export langsung ke platform favoritmu.</p>
+          </div>
+          <div class="step-visual">
+            <div class="export-options">
+              <div class="export-opt active">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+                YouTube
+              </div>
+              <div class="export-opt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                TikTok
+              </div>
+              <div class="export-opt">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                Instagram
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTERACTIVE DEMO / STATS ── -->
+  <section class="stats-section section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-reveal>
+          <div class="stat-number" data-target="97">0</div>
+          <div class="stat-suffix">%</div>
+          <div class="stat-label">Akurasi AI Detection</div>
+        </div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-suffix">x</div>
+          <div class="stat-label">Lebih Cepat dari Manual</div>
+        </div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-number" data-target="2400">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Pengguna Aktif</div>
+        </div>
+        <div class="stat-card" data-reveal>
+          <div class="stat-number" data-target="30">0</div>
+          <div class="stat-suffix">+</div>
+          <div class="stat-label">Format & Platform</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INTERACTIVE TIMELINE DEMO ── -->
+  <section class="demo-section section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Demo Interaktif</div>
+        <h2 class="section-title">Rasakan sendiri <span class="gradient-text">seberapa cepatnya</span></h2>
+        <p class="section-desc">Simulasikan cara kerja AI Clipper secara real-time. Klik tombol di bawah!</p>
+      </div>
+      <div class="demo-widget">
+        <div class="demo-timeline-header">
+          <span class="demo-filename">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:middle;margin-right:6px"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 10l8 4-8 4V10z"/></svg>
+            gaming_session_01.mp4 <span style="color:var(--c-text-3);font-weight:400">(2:34:00)</span>
+          </span>
+          <div class="demo-controls">
+            <button class="demo-btn" id="demoRunBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+              Jalankan AI Clip
+            </button>
+          </div>
+        </div>
+        <div class="demo-timeline-wrap">
+          <div class="demo-timeline" id="demoTimeline">
+            <div class="timeline-track" id="timelineTrack">
+              <div class="timeline-segment" style="width:8%; left:0%"></div>
+              <div class="timeline-segment" style="width:6%; left:12%"></div>
+              <div class="timeline-segment" style="width:9%; left:25%"></div>
+              <div class="timeline-segment" style="width:5%; left:40%"></div>
+              <div class="timeline-segment" style="width:7%; left:52%"></div>
+              <div class="timeline-segment" style="width:8%; left:65%"></div>
+              <div class="timeline-segment" style="width:6%; left:78%"></div>
+              <div class="timeline-segment" style="width:5%; left:90%"></div>
+            </div>
+            <div class="timeline-playhead" id="playhead"></div>
+            <div class="highlight-markers" id="highlightMarkers"></div>
+          </div>
+          <div class="demo-timestamps">
+            <span>0:00</span><span>30:00</span><span>1:00:00</span><span>1:30:00</span><span>2:00:00</span><span>2:34:00</span>
+          </div>
+        </div>
+        <div class="demo-results" id="demoResults">
+          <div class="demo-status" id="demoStatus">Tekan "Jalankan AI Clip" untuk memulai simulasi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRICING ── -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Harga</div>
+        <h2 class="section-title">Harga yang <span class="gradient-text">transparan</span></h2>
+        <p class="section-desc">Mulai gratis, upgrade kapan pun. Tidak ada biaya tersembunyi.</p>
+        <div class="pricing-toggle">
+          <span>Bulanan</span>
+          <label class="toggle-switch" for="billingToggle">
+            <input type="checkbox" id="billingToggle" />
+            <span class="toggle-slider"></span>
+          </label>
+          <span>Tahunan <em class="save-badge">Hemat 30%</em></span>
+        </div>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card" data-reveal>
+          <div class="plan-name">Starter</div>
+          <div class="plan-price">
+            <span class="price-currency">Rp</span>
+            <span class="price-amount" data-monthly="0" data-yearly="0">0</span>
+            <span class="price-period">/bulan</span>
+          </div>
+          <p class="plan-desc">Cocok untuk kreator yang baru mulai.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>5 clip / bulan</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>AI Scene Detection basic</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Export MP4 & GIF</li>
+            <li class="disabled"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Subtitle Generator</li>
+            <li class="disabled"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#cbd5e1" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Cloud Sync</li>
+          </ul>
+          <a href="#" class="btn-outline plan-btn" id="starterPlanBtn">Mulai Gratis</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured" data-reveal>
+          <div class="popular-badge">Paling Populer</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">
+            <span class="price-currency">Rp</span>
+            <span class="price-amount" data-monthly="99000" data-yearly="69000">99.000</span>
+            <span class="price-period">/bulan</span>
+          </div>
+          <p class="plan-desc">Untuk kreator serius yang ingin produksi lebih cepat.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Unlimited clip</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>AI Scene Detection advanced</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Export semua format</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Subtitle Generator (30+ bahasa)</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Cloud Sync 50GB</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Batch Processing</li>
+          </ul>
+          <a href="#" class="btn-primary plan-btn" id="proPlanBtn">Mulai 14 Hari Gratis</a>
+        </div>
+
+        <div class="pricing-card" data-reveal>
+          <div class="plan-name">Team</div>
+          <div class="plan-price">
+            <span class="price-currency">Rp</span>
+            <span class="price-amount" data-monthly="299000" data-yearly="199000">299.000</span>
+            <span class="price-period">/bulan</span>
+          </div>
+          <p class="plan-desc">Untuk tim produksi konten dan agensi.</p>
+          <ul class="plan-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Semua fitur Pro</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Hingga 10 anggota tim</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Cloud Sync 500GB</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Priority Support</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Custom branding</li>
+          </ul>
+          <a href="#" class="btn-outline plan-btn" id="teamPlanBtn">Hubungi Kami</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Testimoni</div>
+        <h2 class="section-title">Disukai oleh <span class="gradient-text">ribuan kreator</span></h2>
+      </div>
+      <div class="testimonials-track-wrap">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Clipper mengubah cara saya edit video gaming. Dulu 4 jam editing, sekarang 20 menit. Game changer banget!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#6366f1,#8b5cf6)">RH</div>
+              <div class="testimonial-author-info"><strong>Rizky Handoko</strong><small>Gaming Streamer · 250K subs</small></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"AI subtitle generator-nya akurat banget untuk Bahasa Indonesia. Sangat membantu konten edukasi saya."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#3b82f6,#06b6d4)">AW</div>
+              <div class="testimonial-author-info"><strong>Anisa Widyastuti</strong><small>Edukasi Creator · 180K subs</small></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Batch processing-nya luar biasa. Kami proses 200 video sekaligus untuk klien dalam waktu satu malam. Tidak ada tool lain yang bisa."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#f59e0b,#ef4444)">MP</div>
+              <div class="testimonial-author-info"><strong>Muhammad Pratama</strong><small>Founder · Content Agency</small></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Export langsung ke TikTok dan Instagram Reels tanpa resize manual. UI-nya bersih dan tidak bikin bingung."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#10b981,#3b82f6)">DS</div>
+              <div class="testimonial-author-info"><strong>Dewi Sartika</strong><small>Lifestyle Creator · 90K followers</small></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Cloud sync bikin kerja tim jadi mudah banget. Editor dan talent bisa akses project yang sama dari kota berbeda."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#ec4899,#f43f5e)">SF</div>
+              <div class="testimonial-author-info"><strong>Satria Firmansyah</strong><small>Video Producer</small></div>
+            </div>
+          </div>
+          <!-- Duplicated for infinite scroll -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Clipper mengubah cara saya edit video gaming. Dulu 4 jam editing, sekarang 20 menit. Game changer banget!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#6366f1,#8b5cf6)">RH</div>
+              <div class="testimonial-author-info"><strong>Rizky Handoko</strong><small>Gaming Streamer · 250K subs</small></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"AI subtitle generator-nya akurat banget untuk Bahasa Indonesia. Sangat membantu konten edukasi saya."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#3b82f6,#06b6d4)">AW</div>
+              <div class="testimonial-author-info"><strong>Anisa Widyastuti</strong><small>Edukasi Creator · 180K subs</small></div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Batch processing-nya luar biasa. Kami proses 200 video sekaligus untuk klien dalam waktu satu malam."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg,#f59e0b,#ef4444)">MP</div>
+              <div class="testimonial-author-info"><strong>Muhammad Pratama</strong><small>Founder · Content Agency</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── COMMUNITY SECTION ── -->
+  <section class="community-section section" id="community">
+    <div class="container">
+      <div class="community-card">
+        <div class="community-left">
+          <div class="section-tag">Komunitas</div>
+          <h2>Bergabung dengan komunitas<br/><span class="gradient-text">kreator Clipper</span></h2>
+          <p>Dapatkan tips eksklusif, update fitur terbaru, dan terhubung dengan ribuan kreator konten Indonesia. Gratis selamanya.</p>
+          <ul class="community-perks">
+            <li>
+              <div class="perk-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span>2,400+ anggota aktif</span>
+            </li>
+            <li>
+              <div class="perk-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <span>Diskusi &amp; tanya jawab langsung</span>
+            </li>
+            <li>
+              <div class="perk-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span>Akses early access fitur baru</span>
+            </li>
+            <li>
+              <div class="perk-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <span>Template &amp; preset gratis setiap minggu</span>
+            </li>
+          </ul>
+          <button class="btn-primary btn-lg community-qr-btn" id="openQrBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="3" height="3"/><line x1="17" y1="17" x2="20" y2="17"/><line x1="20" y1="14" x2="20" y2="17"/></svg>
+            Gabung via QR Code
+          </button>
+        </div>
+        <div class="community-right">
+          <div class="community-stats-grid">
+            <div class="community-stat">
+              <span class="cs-num">2.4K+</span>
+              <span class="cs-label">Anggota</span>
+            </div>
+            <div class="community-stat">
+              <span class="cs-num">150+</span>
+              <span class="cs-label">Pesan/hari</span>
+            </div>
+            <div class="community-stat">
+              <span class="cs-num">48+</span>
+              <span class="cs-label">Tutorial</span>
+            </div>
+            <div class="community-stat">
+              <span class="cs-num">100%</span>
+              <span class="cs-label">Gratis</span>
+            </div>
+          </div>
+          <div class="community-preview">
+            <div class="chat-bubble-wrap">
+              <div class="chat-bubble cb-left">
+                <div class="cb-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">R</div>
+                <div class="cb-body">
+                  <span class="cb-name">Rizky</span>
+                  <p>Ada yang tau cara export GIF tanpa kompresi?</p>
+                </div>
+              </div>
+              <div class="chat-bubble cb-right">
+                <div class="cb-body">
+                  <span class="cb-name">Admin Clipper</span>
+                  <p>Bisa lewat Settings &gt; Export &gt; pilih GIF Lossless</p>
+                </div>
+                <div class="cb-avatar" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">C</div>
+              </div>
+              <div class="chat-bubble cb-left">
+                <div class="cb-avatar" style="background:linear-gradient(135deg,#10b981,#3b82f6)">D</div>
+                <div class="cb-body">
+                  <span class="cb-name">Dewi</span>
+                  <p>Makasih infonya! Fitur batch processing juga keren banget btw</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA SECTION ── -->
+  <section class="cta-section section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-blob"></div>
+        <h2>Siap memangkas waktu editing<br/><span class="gradient-text">hingga 10x lebih cepat?</span></h2>
+        <p>Bergabunglah dengan 2,400+ kreator yang sudah menggunakan Clipper setiap hari.</p>
+        <div class="cta-actions">
+          <a href="#pricing" class="btn-primary btn-lg" id="ctaMainBtn">Mulai Gratis — Tanpa Kartu Kredit</a>
+          <a href="#features" class="btn-ghost">Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container footer-inner">
+
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="logo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 4l12 8-12 8V4z"/>
+                <line x1="19" y1="4" x2="19" y2="20"/>
+              </svg>
+            </div>
+            <span class="logo-text">Clipper</span>
+          </a>
+          <p class="footer-brand-desc">Video clipping yang lebih cerdas<br/>untuk kreator konten Indonesia.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.5 4.3 9 4-.9-4.2 4-6.5 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <div class="footer-col">
+            <h4>Produk</h4>
+            <ul>
+              <li><a href="#features">Fitur</a></li>
+              <li><a href="#pricing">Harga</a></li>
+              <li><a href="#">Changelog</a></li>
+              <li><a href="#">API Docs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Perusahaan</h4>
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Karir</a></li>
+              <li><a href="#">Press Kit</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Dukungan</h4>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Status</a></li>
+              <li><a href="#">Komunitas</a></li>
+              <li><a href="#">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Clipper. Semua hak dilindungi.</p>
+        <div class="footer-legal">
+          <a href="#">Kebijakan Privasi</a>
+          <span class="footer-dot"></span>
+          <a href="#">Syarat &amp; Ketentuan</a>
+          <span class="footer-dot"></span>
+          <a href="#">Cookie</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCROLL TO TOP ── -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ── QR CODE MODAL ── -->
+  <div class="qr-overlay" id="qrOverlay">
+    <div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-label="QR Code Komunitas">
+      <button class="qr-close" id="qrCloseBtn" aria-label="Tutup">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="qr-modal-header">
+        <div class="qr-modal-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h3>Komunitas Clipper</h3>
+          <p>Scan QR untuk bergabung sekarang</p>
+        </div>
+      </div>
+      <div class="qr-image-wrap">
+        <img src="community_qr.jpg" alt="QR Code Komunitas Clipper" class="qr-img" />
+        <div class="qr-platform-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          WhatsApp / Telegram
+        </div>
+      </div>
+      <div class="qr-modal-footer">
+        <p>Arahkan kamera HP ke QR code di atas</p>
+        <div class="qr-members">
+          <div class="qr-avatars">
+            <div class="avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">M</div>
+            <div class="avatar" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">A</div>
+            <div class="avatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">R</div>
+            <div class="avatar" style="background:linear-gradient(135deg,#10b981,#3b82f6)">D</div>
+            <div class="avatar" style="background:linear-gradient(135deg,#ec4899,#f43f5e)">S</div>
+          </div>
+          <span>+2,400 anggota sudah bergabung</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
